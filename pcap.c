@@ -64,7 +64,7 @@ int main() {
     bpf_u_int32 net;
 
     // Step 1: Open live pcap session on NIC with name enp0s3
-    handle = pcap_open_live("enp0s3", BUFSIZ, 1, 1000, errbuf);
+    handle = pcap_open_live("ens33", BUFSIZ, 1, 1000, errbuf);
     if (handle == NULL) {
         fprintf(stderr, "Could not open device: %s\n", errbuf);
         return 1;
